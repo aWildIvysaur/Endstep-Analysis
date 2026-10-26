@@ -28,13 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.fileButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // fileButton
+            // 
+            this.fileButton.Location = new System.Drawing.Point(12, 12);
+            this.fileButton.Name = "fileButton";
+            this.fileButton.Size = new System.Drawing.Size(75, 23);
+            this.fileButton.TabIndex = 0;
+            this.fileButton.Text = "Open File";
+            this.fileButton.UseVisualStyleBackColor = true;
+            this.fileButton.Click += new System.EventHandler(this.fileButton_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.fileButton);
+            this.Name = "Form1";
+            this.Text = "Endstep Analysis";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button fileButton;
     }
 }
 
